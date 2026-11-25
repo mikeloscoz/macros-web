@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="es" class="sin-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Macros · Calorías y macros sin complicarte</title>
+  <meta name="description" content="Una app Android pequeña y gratuita para contar calorías y macros. Sin cuentas, sin anuncios y sin internet: tus datos se quedan en tu móvil.">
+  <meta name="theme-color" content="#1B7F4B">
+  <meta property="og:title" content="Macros · Calorías y macros sin complicarte">
+  <meta property="og:description" content="App Android gratuita. Sin cuentas, sin anuncios y sin internet.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="marca" href="#inicio" aria-label="Macros, inicio">
+      <img src="favicon.svg" alt="" width="32" height="32">
+      <span>Macros</span>
+    </a>
+    <nav class="nav__links" aria-label="Secciones">
+      <a href="#funciones">Funciones</a>
+      <a href="#privacidad">Privacidad</a>
+      <a href="#instalar">Instalar</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="boton boton--pequeno" href="https://github.com/mikeloscoz/macros/releases/latest/download/macros.apk" data-descarga>Descargar</a>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__fondo" aria-hidden="true"></div>
+    <div class="contenedor hero__grid">
+      <div class="hero__texto">
+        <p class="etiqueta aparece"><span class="punto"></span> Gratis · Android · Versión 1.0</p>
+        <h1 class="aparece" style="--retraso:80ms">Tus calorías y macros, <span class="degradado">sin complicarte.</span></h1>
+        <p class="hero__sub aparece" style="--retraso:160ms">
+          Una app pequeña que hice para dejar de apuntar lo que como en una hoja de cálculo.
+          Sin cuentas, sin anuncios y sin internet. Si a ti también te sirve, es tuya.
+        </p>
+        <div class="hero__acciones aparece" style="--retraso:240ms">
+          <a class="boton boton--grande" href="https://github.com/mikeloscoz/macros/releases/latest/download/macros.apk" data-descarga>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+            Descargar APK
+          </a>
+          <a class="boton boton--fantasma boton--grande" href="#funciones">Ver qué hace</a>
+        </div>
+        <p class="hero__nota aparece" style="--retraso:320ms" data-nota-dispositivo>
+          3,3 MB · Android 8 o superior
+        </p>
+      </div>
+
+      <div class="hero__movil aparece" style="--retraso:200ms">
+        <div class="flotante flotante--1" aria-hidden="true">
+          <span class="flotante__icono flotante__icono--prot"></span>
+          <div><b>180 g</b><small>proteína al día</small></div>
+        </div>
+        <div class="flotante flotante--2" aria-hidden="true">
+          <span class="flotante__icono flotante__icono--baja">↓</span>
+          <div><b>−0,5 kg</b><small>por semana</small></div>
+        </div>
+
+        <!-- Maqueta de la pantalla Hoy -->
+        <div class="movil" role="img" aria-label="Pantalla Hoy de la app: anillo con las kcal restantes y barras de carbohidratos, proteínas y grasas">
+          <div class="movil__pantalla">
+            <div class="app">
+              <div class="app__estado"><span>9:41</span><span class="app__iconos"></span></div>
+              <div class="app__cabecera">
+                <div>
+                  <div class="app__titulo">Hoy</div>
+                  <div class="app__fecha">Martes, 24 de noviembre</div>
+                </div>
+                <div class="app__flechas"><span>‹</span><span class="off">›</span></div>
+              </div>
+              <div class="app__tarjeta">
+                <div class="resumen">
+                  <div class="anillo">
+                    <svg viewBox="0 0 120 120">
+                      <circle class="anillo__pista" cx="60" cy="60" r="52"/>
+                      <circle class="anillo__valor" cx="60" cy="60" r="52" pathLength="100" style="--progreso:68"/>
+                    </svg>
+                    <div class="anillo__centro"><b data-contador="640">640</b><small>kcal restantes</small></div>
+                  </div>
+                  <div class="resumen__datos">
+                    <small>Consumidas</small><b>1360 kcal</b>
+                    <small>Objetivo · Perder grasa</small><b>2000 kcal</b>
+                  </div>
+                </div>
+                <hr>
+                <div class="macro" style="--c:var(--carb);--p:69">
+                  <div class="macro__fila"><span>Carbohidratos</span><span><b>118</b> / 172 g</span></div>
+                  <div class="macro__barra"><i></i></div>
+                </div>
+                <div class="macro" style="--c:var(--prot);--p:73">
+                  <div class="macro__fila"><span>Proteínas</span><span><b>131</b> / 180 g</span></div>
+                  <div class="macro__barra"><i></i></div>
+                </div>
+                <div class="macro" style="--c:var(--gras);--p:62">
+                  <div class="macro__fila"><span>Grasas</span><span><b>41</b> / 66 g</span></div>
+                  <div class="macro__barra"><i></i></div>
+                </div>
+              </div>
+              <div class="app__tarjeta">
+                <div class="comida__cabecera"><b>Comida 1</b><span>348 kcal</span></div>
+                <div class="comida__fila"><div>Copos de avena<small>60 g</small></div><b>233 kcal</b></div>
+                <div class="comida__fila"><div>Leche semidesnatada<small>250 g</small></div><b>115 kcal</b></div>
+              </div>
+              <div class="app__tarjeta">
+                <div class="comida__cabecera"><b>Comida 2</b><span>612 kcal</span></div>
+                <div class="comida__fila"><div>Pechuga de pollo<small>180 g</small></div><b>198 kcal</b></div>
+                <div class="comida__fila"><div>Arroz blanco<small>80 g</small></div><b>285 kcal</b></div>
+                <div class="comida__fila"><div>Aceite de oliva<small>10 g</small></div><b>90 kcal</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CINTA ============ -->
+  <section class="cinta" aria-label="Lo básico">
+    <div class="contenedor cinta__lista">
+      <span>Sin cuentas</span><span>Sin anuncios</span><span>Sin internet</span><span>Sin suscripciones</span><span>Código abierto</span>
+    </div>
+  </section>
+
+  <!-- ============ FUNCIONES ============ -->
+  <section class="seccion" id="funciones">
+    <div class="contenedor">
+      <div class="seccion__cabecera aparece">
+        <p class="seccion__antetitulo">Funciones</p>
+        <h2>Lo justo para llevar el control. <span class="tenue">Nada que agobie.</span></h2>
+      </div>
+
+      <div class="bento">
+        <article class="caja caja--ancha aparece">
+          <div class="caja__texto">
+            <h3>Tu día de un vistazo</h3>
+            <p>Un anillo con las kcal que te quedan y tres barras para carbohidratos, proteínas y grasas. Hasta cuatro comidas, y cambiar los gramos o borrar un alimento es un toque.</p>
+          </div>
+          <div class="mini-macros" aria-hidden="true">
+            <div class="macro" style="--c:var(--carb);--p:69"><div class="macro__fila"><span>Carbohidratos</span><span>Te quedan 54 g</span></div><div class="macro__barra"><i></i></div></div>
+            <div class="macro" style="--c:var(--prot);--p:73"><div class="macro__fila"><span>Proteínas</span><span>Te quedan 49 g</span></div><div class="macro__barra"><i></i></div></div>
+            <div class="macro" style="--c:var(--gras);--p:62"><div class="macro__fila"><span>Grasas</span><span>Te quedan 25 g</span></div><div class="macro__barra"><i></i></div></div>
+          </div>
+        </article>
+
+        <article class="caja aparece" style="--retraso:80ms">
+          <div class="caja__icono"><svg viewBox="0 0 24 24"><path d="M4 20V10m6 10V4m6 16v-7m4 7H2"/></svg></div>
+          <h3>Objetivos que se calculan solos</h3>
+          <p>Con tu peso, tus calorías de mantenimiento y tu objetivo: perder grasa, mantener o ganar masa.</p>
+          <div class="objetivos" aria-hidden="true">
+            <span><b>2000</b> kcal</span><span style="--c:var(--carb)"><b>172</b> g C</span><span style="--c:var(--prot)"><b>180</b> g P</span><span style="--c:var(--gras)"><b>66</b> g G</span>
+          </div>
+        </article>
+
+        <article class="caja aparece">
+          <div class="caja__icono"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 4 8-8m0 0h-5m5 0v5"/></svg></div>
+          <h3>Progreso de verdad</h3>
+          <p>Tu peso en una gráfica, la media de kcal frente al objetivo y datos rápidos. Por semana, mes o año.</p>
+          <div class="barras" aria-hidden="true">
+            <i style="--h:78"></i><i style="--h:92"></i><i style="--h:70"></i><i class="roja" style="--h:104"></i><i style="--h:84"></i><i style="--h:88"></i><i style="--h:66"></i>
+            <span class="barras__objetivo"></span>
+          </div>
+        </article>
+
+        <article class="caja aparece" style="--retraso:80ms">
+          <div class="caja__icono"><svg viewBox="0 0 24 24"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M6 6l2 2m8 8 2 2M6 18l2-2m8-8 2-2"/></svg></div>
+          <h3>Días que no cuentan</h3>
+          <p>¿Comida de trabajo o vacaciones? Márcalo y ese día no estropea tus medias.</p>
+          <div class="interruptor" aria-hidden="true"><span>No contar este día</span><i></i></div>
+        </article>
+
+        <article class="caja aparece">
+          <div class="caja__icono"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 2m6-2a9 9 0 1 1-3-6.7M21 4v4h-4"/></svg></div>
+          <h3>Tu historial, intacto</h3>
+          <p>Si bajas de peso o cambias de objetivo, los días pasados conservan las metas que tenían entonces.</p>
+        </article>
+
+        <article class="caja aparece" style="--retraso:80ms">
+          <div class="caja__icono"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+          <h3>Tus alimentos</h3>
+          <p>Viene con unos 80 alimentos de serie. Añade los tuyos o impórtalos desde un CSV.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PANTALLA PROGRESO ============ -->
+  <section class="seccion seccion--dividida">
+    <div class="contenedor dividida">
+      <div class="dividida__texto aparece">
+        <p class="seccion__antetitulo">Progreso</p>
+        <h2>Ve hacia dónde vas, no solo lo que comiste hoy.</h2>
+        <p class="parrafo">La media de cada semana frente a tu objetivo, la evolución de tu peso y cuántos kilos bajas o subes por semana. Las medias solo cuentan los días que has apuntado, así que olvidarte un día no te descuadra nada.</p>
+        <ul class="lista-check">
+          <li>Semana, mes o año, y navega a periodos anteriores</li>
+          <li>Barras en rojo solo si te pasaste del objetivo de ese día</li>
+          <li>Historial de pesos que puedes corregir</li>
+        </ul>
+      </div>
+
+      <div class="dividida__movil aparece" style="--retraso:120ms">
+        <div class="movil movil--inclinado" role="img" aria-label="Pantalla Progreso de la app: peso actual, gráfica de peso y kcal por día">
+          <div class="movil__pantalla">
+            <div class="app">
+              <div class="app__estado"><span>9:41</span><span class="app__iconos"></span></div>
+              <div class="app__titulo app__titulo--solo">Progreso</div>
+              <div class="selector"><span class="activo">Semana</span><span>Mes</span><span>Año</span></div>
+              <div class="app__tarjeta">
+                <div class="peso">
+                  <div><small>Peso actual</small><b>81,4<span> kg</span></b><small>Desde 84,0 kg al empezar</small></div>
+                  <span class="pastilla">↓ 2,6 kg</span>
+                </div>
+                <svg class="linea" viewBox="0 0 200 70" preserveAspectRatio="none" aria-hidden="true">
+                  <path class="linea__area" d="M0 12 L33 18 L66 22 L100 30 L133 36 L166 44 L200 50 L200 70 L0 70Z"/>
+                  <path class="linea__trazo" d="M0 12 L33 18 L66 22 L100 30 L133 36 L166 44 L200 50" pathLength="100"/>
+                </svg>
+              </div>
+              <div class="app__tarjeta">
+                <b class="app__subtitulo">Kcal por día</b>
+                <small class="tenue-app">Objetivo 2000 kcal · media <b>1942</b></small>
+                <div class="barras barras--app">
+                  <i style="--h:86"></i><i style="--h:94"></i><i style="--h:80"></i><i class="roja" style="--h:108"></i><i style="--h:90"></i><i style="--h:96"></i><i style="--h:82"></i>
+                  <span class="barras__objetivo"></span>
+                </div>
+                <div class="dias"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRIVACIDAD ============ -->
+  <section class="seccion" id="privacidad">
+    <div class="contenedor">
+      <div class="privacidad aparece">
+        <div class="privacidad__brillo" aria-hidden="true"></div>
+        <div class="privacidad__escudo" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h2>Tus datos no salen de tu móvil.</h2>
+        <p>La app ni siquiera tiene permiso para usar internet. No hay servidores, ni cuentas, ni analítica. Todo se guarda en el teléfono, y la copia de seguridad la haces tú, en un archivo que guardas donde quieras.</p>
+        <div class="privacidad__datos">
+          <div><b>0</b><span>permisos de red</span></div>
+          <div><b>0</b><span>cuentas</span></div>
+          <div><b>0</b><span>anuncios</span></div>
+          <div><b>100 %</b><span>en tu móvil</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSTALAR ============ -->
+  <section class="seccion" id="instalar">
+    <div class="contenedor">
+      <div class="seccion__cabecera aparece">
+        <p class="seccion__antetitulo">Instalar</p>
+        <h2>Tres pasos y listo.</h2>
+        <p class="parrafo">No está en Google Play: es un proyecto personal, así que se instala descargando la APK.</p>
+      </div>
+      <ol class="pasos">
+        <li class="paso aparece">
+          <span class="paso__num">1</span>
+          <h3>Descárgala</h3>
+          <p>Abre esta página en tu Android y pulsa <b>Descargar APK</b>.</p>
+        </li>
+        <li class="paso aparece" style="--retraso:80ms">
+          <span class="paso__num">2</span>
+          <h3>Permite la instalación</h3>
+          <p>Android te pedirá permitir instalar apps desde el navegador. Acepta: solo la primera vez.</p>
+        </li>
+        <li class="paso aparece" style="--retraso:160ms">
+          <span class="paso__num">3</span>
+          <h3>Ábrela</h3>
+          <p>Pon tu peso, tus calorías de mantenimiento y tu objetivo. Ya está.</p>
+        </li>
+      </ol>
+      <div class="aviso aparece">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+        <p>Es normal que el navegador avise de que <i>"este tipo de archivo puede ser dañino"</i>: sale con cualquier app que no venga de Google Play. El código es abierto, puedes revisarlo en <a href="https://github.com/mikeloscoz/macros">GitHub</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PREGUNTAS ============ -->
+  <section class="seccion" id="preguntas">
+    <div class="contenedor contenedor--estrecho">
+      <div class="seccion__cabecera aparece">
+        <p class="seccion__antetitulo">Preguntas</p>
+        <h2>Por si acaso.</h2>
+      </div>
+      <div class="faq">
+        <details class="aparece">
+          <summary>¿Es gratis de verdad?</summary>
+          <p>Sí. Sin versión de pago, sin suscripciones y sin anuncios. La hice para mí y la comparto tal cual.</p>
+        </details>
+        <details class="aparece">
+          <summary>¿Hay versión para iPhone?</summary>
+          <p>No, de momento solo Android (8 o superior).</p>
+        </details>
+        <details class="aparece">
+          <summary>¿Cómo la actualizo?</summary>
+          <p>Descarga la nueva versión desde esta página e instálala encima de la que tienes. No se pierde nada.</p>
+        </details>
+        <details class="aparece">
+          <summary>¿Y si cambio de móvil?</summary>
+          <p>En Ajustes, exporta la copia de seguridad (un archivo JSON). Instala la app en el móvil nuevo e importa ese archivo.</p>
+        </details>
+        <details class="aparece">
+          <summary>¿De dónde salen los objetivos?</summary>
+          <p>Calorías: tu mantenimiento −300 para perder grasa, +300 para ganar masa. Proteínas y grasas según tu peso, y los carbohidratos son lo que sobra. Es una guía sencilla, no consejo médico.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="seccion seccion--final">
+    <div class="contenedor final aparece">
+      <img src="favicon.svg" alt="" width="72" height="72" class="final__icono">
+      <h2>Pruébala. Si no te convence, se desinstala en un segundo.</h2>
+      <a class="boton boton--grande" href="https://github.com/mikeloscoz/macros/releases/latest/download/macros.apk" data-descarga>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+        Descargar APK
+      </a>
+      <p class="hero__nota" data-nota-dispositivo>3,3 MB · Android 8 o superior</p>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie__inner">
+    <span>Macros 1.0 · Hecha por Mikel</span>
+    <a href="https://github.com/mikeloscoz/macros">Código en GitHub</a>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
